@@ -3,6 +3,7 @@ var cleanCss = require('gulp-clean-css')
 var sourcemaps = require('gulp-sourcemaps')
 var browserSync = require('browser-sync').create()
 var imagemin = require('gulp-imagemin')
+var ghpages = require('gh-pages')
 var postcss = require ('gulp-postcss')
 var concat = require('gulp-concat')
 
@@ -59,6 +60,10 @@ gulp.task("watch", function(){
     gulp.watch("src/css/style.css", gulp.series('css'))
     gulp.watch("src/fonts/*", gulp.series('fonts'))
     gulp.watch("src/img/*", gulp.series('images'))
+})
+
+gulp.task("deploy", function() {
+    ghpages.publish('dist')
 })
 
 //var defaultTask = function() {}
