@@ -1,0 +1,16 @@
+@custom-media --mq-medium (max-width: 800px);
+
+:root {
+    --primary-color: green;
+}
+
+@media (--mq-medium) {
+    :root {
+        --primary-color: yellow; 
+    }
+}
+
+body {
+    font-family: 'Jost';
+    background-color: var(--primary-color);
+}
