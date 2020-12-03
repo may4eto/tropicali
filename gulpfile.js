@@ -57,7 +57,7 @@ gulp.task("watch", function(){
         }
     })
     gulp.watch("src/*.html", gulp.series('html')).on("change", browserSync.reload)
-    gulp.watch("src/css/style.css", gulp.series('css'))
+    gulp.watch("src/css/*", gulp.series('css'))
     gulp.watch("src/fonts/*", gulp.series('fonts'))
     gulp.watch("src/img/*", gulp.series('images'))
 })
