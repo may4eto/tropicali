@@ -77,6 +77,9 @@ section.grid p{
     margin: 24px 0 24px 0;
 }
 
+section.grid img {
+    width: 100%;
+}
 .button {
     display:inline-block;
     color: var(--text-on-dark);
